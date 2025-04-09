@@ -8,7 +8,7 @@ type Props = {};
 
 export class App extends React.Component<Props, State> {
   state: State = {
-    pressedKey: 'string',
+    pressedKey: string,
   };
 
   handlePressedKey = (event: KeyboardEvent<HTMLDivElement>) => {
