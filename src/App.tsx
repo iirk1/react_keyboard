@@ -8,10 +8,10 @@ type Props = {};
 
 export class App extends React.Component<Props, State> {
   state: State = {
-    pressedKey: '',
+    pressedKey: 'string',
   };
 
-  handlePressedKey = event => {
+  handlePressedKey = (event: KeyboardEvent<HTMLDivElement>) => {
     this.setState({ pressedKey: event.key });
   };
 
@@ -28,7 +28,7 @@ export class App extends React.Component<Props, State> {
 
     return (
       <div className="App">
-        {pressedKey ? (
+        {pressedKey !== 'string' ? (
           <p className="App__message">The last pressed key is [{pressedKey}]</p>
         ) : (
           <p className="App__message">Nothing was pressed yet</p>
